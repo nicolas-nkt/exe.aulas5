@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float numero, eleva, elevação;
+
+    printf("Digite seu numero base: ");
+    scanf("%f", &numero);
+
+    printf("Digite o expoente que voce deseja: ");
+    scanf("%f", &eleva);
+
+   elevação = pow(numero, eleva);
+
+    printf("Elevacao: %.2f ^ %.2f = %.2f\n", numero, eleva, elevação);
+
+    return 0;
+}

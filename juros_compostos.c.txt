@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int contador;
+    float c; 
+    float i; 
+    int t;   
+
+        printf("Digite seu capital: ");
+            scanf("%f", &c);
+
+        printf("Digite o juros: ");
+            scanf("%f", &i);
+
+        printf("Digite o tempo em meses: ");
+            scanf("%d", &t);
+
+        printf("\nSeu rendimento é:\n");
+
+        for(contador = 1; contador <= t; contador++) {
+         float final = c * pow(1/100.0 + i, t);
+
+         printf("Montante final: R$ %.2f\n", final);
+        }
+
+     return 0;
+}
