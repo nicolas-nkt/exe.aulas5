@@ -1,30 +1,28 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    char modo = 'i';
+    float c, i;
+    int t;
+    
+   
+        printf("Digite seu capital: ");
+            scanf("%f", &c);
 
-    for (; modo != 'F'; ) {
-        printf("\nDigite o modo (L - lavar, E - enxaguar, S - secar, F - fim): ");
-        scanf(" %c", &modo); // espaço resolve o problema do ENTER
+        printf("Digite o juros: ");
+            scanf("%f", &i);
 
-        switch (modo) {
-            case 'L':
-                printf(">> Máquina: LAVANDO...\n");
-                break;
-            case 'E':
-                printf(">> Máquina: ENXAGUANDO...\n");
-                break;
-            case 'S':
-                printf(">> Máquina: SECANDO...\n");
-                break;
-            case 'F':
-                printf(">> Encerrando...\n");
-                break;
-            default:
-                printf(">> Opção inválida!\n");
+        printf("Digite o tempo em meses: ");
+            scanf("%d", &t);
+
+        printf("\nSeu rendimento é:\n");
+        
+    i = i/100;
+    
+        for(int mes = 1; mes<=t, mes++;) {
+            float total = c * pow(1 +  i, mes);
+            printf("Mes %d - total: %.6f\n", mes, total );
         }
-    }
-
-    printf("Finalizado\n");
-    return 0;
+ return 0;       
+      
 }
